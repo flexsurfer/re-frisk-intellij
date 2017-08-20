@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.2.8"
+    id "com.cursive-ide.clojure" version "1.1.0"
+}
+
+intellij {
+    pluginName 'rfd'
+    version '2017.1.2'
+    updateSinceUntilBuild = false
+
+}
+
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven { url "https://clojars.org/repo" }
+}
+
+compileClojure {
+    aotCompile = true
+}
+
+dependencies {
+    compile group: 'org.clojure', name: 'clojure', version: '1.9.0-alpha15'
+    compile group: 'com.taoensso', name: 'sente', version: '1.11.0'
+    compile group: 'com.cognitect', name: 'transit-clj', version: '0.8.290'
+    compile group: 'aleph', name: 'aleph', version: '0.4.2'
+    compile group: 'org.clojure', name: 'core.async', version: '0.3.442'
+    compile group: 'com.taoensso', name: 'timbre', version: '4.10.0'
+    compile group: 'org.clojure', name: 'tools.nrepl', version: '0.2.13'
+}

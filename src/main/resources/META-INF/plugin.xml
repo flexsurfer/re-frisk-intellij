@@ -1,0 +1,38 @@
+<idea-plugin url="https://plugins.jetbrains.com/plugin/8583">
+    <id>rasom</id>
+    <name>re-frisk Intellij</name>
+    <version>1.0.1</version>
+    <vendor email="roman.wolosovskyi@gmail.com" url="http://github.com/rasom">Roman Volosovskyi</vendor>
+
+    <description><![CDATA[<p>-</p>]]></description>
+
+    <change-notes><![CDATA[
+        <p>Sorry, nothing yet!</p>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="143"/>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="re-frisk Intellij"
+                    anchor="right"
+                    factoryClass="re_frisk_intellij.ReFriskToolWindow"/>
+    </extensions>
+
+    <application-components>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <actions>
+    </actions>
+
+</idea-plugin>
